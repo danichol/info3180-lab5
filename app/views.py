@@ -47,6 +47,7 @@ def login():
     # client-side form data. For example, WTForms is a library that will
     # handle this for us, and we use a custom LoginForm to validate.
     form = LoginForm()
+    error = None
     # Login and validate the user.
     if request.method == 'POST' and form.validate_on_submit():
         # Query our database to see if the username and password entered
